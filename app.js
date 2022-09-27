@@ -25,4 +25,4 @@ const indexRouter=require("./Routes/index")
 app.use("/users",indexRouter)
 
 
-app.listen(process.env.PORT,()=>console.log(`app listening on port ${process.env.PORT}`))
+app.listen(process.env.PORT||3300,()=>console.log(`app listening on port ${process.env.PORT}`))
