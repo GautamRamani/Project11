@@ -24,5 +24,4 @@ mongoose.connect(process.env.CONNECTION_URL)
 const indexRouter=require("./Routes/index")   
 app.use("/users",indexRouter)
 
-
 app.listen(process.env.PORT||3300,()=>console.log(`app listening on port ${process.env.PORT}`))
