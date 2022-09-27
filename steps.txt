@@ -20,3 +20,16 @@ cors:-
 
 bodyparser:-
         Body Parser is a middleware of Node JS used to handle HTTP POST request. Body Parser can parse string based client request body into JavaScript Object which we can use in our application.06-Sept-2021
+
+
+add in package.json file:-"start":"node index.js"
+
+
+steps for heroku login in command line:-
+heroku
+heroku login -i
+Email:gautam.ramani06@gmail.com
+Password:gkRAMA*$#0079
+heroku apps
+heroku logs --tail --app eshop-project11
+

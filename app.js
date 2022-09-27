@@ -17,11 +17,14 @@ app.use(morgan("tiny"))
 // app.use(authJwt())
 
 
-mongoose.connect(process.env.CONNECTION_URL)
+mongoose.connect(process.env.CONNECTION_URL,{
+    dbname:process.env.dbname
+})
 .then(()=>console.log("Database Connected Successfully..."))
 .catch((err)=>{console.log(err)})
 
 const indexRouter=require("./Routes/index")   
 app.use("/users",indexRouter)
 
-app.listen(process.env.PORT||3300,()=>console.log(`app listening on port ${process.env.PORT}`))
+const PORT=process.env.PORT||3300;
+app.listen(process.env.PORT,()=>console.log(`app listening on port ${process.env.PORT}`))
